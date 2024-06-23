@@ -35,7 +35,7 @@ const HomePage = () => {
     const endpoint = selectedModel === 'deep-learning' ? '/predict' : '/predict-dp'; // Determine the endpoint based on the selected model
 
     try {
-      const response = await fetch(`https://demobackend-nine.vercel.app/${endpoint}`, {
+      const response = await fetch(`https://demo-sage-kappa.vercel.app/${endpoint}`, {
         method: 'POST',
         body: formData,
         headers: {
