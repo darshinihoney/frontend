@@ -35,7 +35,7 @@ const HomePage = () => {
     const endpoint = selectedModel === 'deep-learning' ? '/predict' : '/predict-dp'; // Determine the endpoint based on the selected model
 
     try {
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`https://demobackend-nine.vercel.app/${endpoint}`, {
         method: 'POST',
         body: formData,
         headers: {
@@ -127,9 +127,9 @@ const HomePage = () => {
           Brain tumors can begin in your brain (primary brain tumors), or cancer can begin in other parts of your body and spread to your brain (secondary, or metastatic, brain tumors).
         </p>
       </div>
-      <div className="ml-8">
+      {/* <div className="ml-8">
         <img src="https://via.placeholder.com/200" alt="Brain" className="rounded-lg shadow-lg" />
-      </div>
+      </div> */}
     </div>
     <div className="text-center mt-8">
       <h3 className="text-2xl font-bold mb-4">Select a model to predict brain tumor:</h3>
